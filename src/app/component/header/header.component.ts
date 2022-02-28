@@ -27,14 +27,6 @@ export class HeaderComponent implements OnInit {
     })
   }
 
-  // document.querySelector('button').addEventListener('click', e => {
-  //   console.log('button clicked')
-  // })
-
-  // document.addEventListener('click', e => {
-  //   console.log('click reached document, close menu')
-  // })
-
   //This function will open the shopping cart modal.
   openPopup() {
     this.name = '';

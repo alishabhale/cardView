@@ -16,8 +16,3 @@ export class ApiService {
     }))
   }
 }
-
-
-
-//https://fakestoreapi.com/products/
-

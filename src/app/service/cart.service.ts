@@ -41,6 +41,7 @@ export class CartService {
     this.cartItemList.map((a:any, index:any)=>{
       if(product.id === a.id){
         product.quantity = 0;
+        product.isAddedToTheCart = 'No';
         this.cartItemList.splice(index,1);
       }
     })

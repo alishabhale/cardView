@@ -1,0 +1,15 @@
+<div class="card-top container-fluid">
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of productList">
+      <div class="card col-md-3">
+        <img class="margin-left-50px" src="{{item.image}}" alt="">
+        <h5 class="description">{{item.title}}</h5>
+        <p class="description">{{item.description}}</p>
+        <p><strong>Price:</strong> ${{item.price}}</p>
+        <button *ngIf="item.isAddedToTheCart == 'No'" class="btn btn-primary" (click)=addtocart(item) > Add to cart</button>
+        <button *ngIf="item.isAddedToTheCart == 'Yes'" class="btn btn-primary" (click)=addtocart(item) disabled> Added to the cart</button>
+     </div>
+    </ng-container>
+  </div>
+</div>

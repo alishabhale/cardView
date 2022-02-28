@@ -1,0 +1,46 @@
+<header>
+  <div class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+      <i class="icon-size fas fa-shipping-fast">&nbsp;</i>
+      <strong class="header-font">OpsKart</strong>
+    </div>
+    <button class="btn btn-primary" (click)="openPopup()">
+
+      <i class="icon-size fas fa-shopping-cart"></i>
+      <div class="badge bg-danger">{{totalItem}}</div>
+    </button>
+    <div id="try" class="modal" tabindex="-1" [ngStyle]="{'display':displayStyle}">
+      <div role="document">
+          <div class="shopping-cart">
+            <button style="margin-left: 320px; margin-bottom: 10px;" type="button" class="btn-close" aria-label="Close" (click)="closePopup()"></button>
+            <div class="shopping-cart-header">
+
+              <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">{{totalItem}}</span>
+              <div class="shopping-cart-total">
+                <span class="lighter-text">Total:</span>
+                <span class="main-color-text">{{grandTotal}}</span>
+              </div>
+
+            </div> <!--end shopping-cart-header -->
+
+            <img class="empty-cart" *ngIf="products.length == 0"  src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"/>
+            <h5 class="empty-cart-message" *ngIf="products.length == 0">Oops your cart is empty!</h5>
+
+            <ul *ngIf="products.length > 0" class="shopping-cart-items">
+              <li class="clearfix" *ngFor="let item of products">
+                <img src="{{item.image}}" alt="item1" />
+                <span class="item-name">{{item.title}}</span>
+                <span class="item-price"> &#8377; {{item.price}}</span>
+                  <button  class="btn-cart"  (click)=removeFromCart(item)>-</button>
+                  <input  class="item-quantity" min = "1" type="number" id="quantity" value="{{item.quantity}}">
+                  <button class="btn-cart" (click)=addtocart(item)>+</button>
+                <button  class="btn btn-light fas fa-trash-alt" (click)="removeItem(item)"></button>
+              </li>
+            </ul>
+
+            <a *ngIf="products.length > 0 "href="_blank" class="checkout-button">Checkout</a>
+          </div> <!--end shopping-cart -->
+      </div>
+    </div>
+  </div>
+</header>

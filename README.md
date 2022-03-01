@@ -1,6 +1,7 @@
 # Card View
 
 This project has the E-commerce webiste front-end functionalities.
+
 The product list is getting populated by mock api : https://60d779a5307c300017a5f8bb.mockapi.io/productlist.
 
 ## Development server

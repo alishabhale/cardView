@@ -1,6 +1,7 @@
-# AddToCart
+# Card View
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+This project has the E-commerce webiste front-end functionalities.
+The product list is getting populated by mock api : https://60d779a5307c300017a5f8bb.mockapi.io/productlist.
 
 ## Development server
 
